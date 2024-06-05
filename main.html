@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>text editor!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+
+    <script>
+      
+    </script>
+  </head>
+
+
+  <body onload="start()">
+    
+    <div class="topBar" id="topBar">
+        <div class="file" id="file">
+            <button class="fileBtn" id="topButton">File</button>
+                <div class="fileContent" id="contents">
+                    <a href =javascript:saveCookie()>save as a cookie</a>
+                    <a href =javascript:saveLocal()>save locally</a>
+                    <a href ="javascript:printing()">print</a>
+                </div>
+        </div>
+
+        <div class="options" id="options">
+          <button class="optionBtn" id="topButton2">Options</button>
+              <div class="fileContent" id="contents">
+                  <a href =javascript:clearCookies()>clear cookies</a>
+                  <a href =javascript:switchTheme() id="themes">switch to light mode</a>
+                  <a href ="javascript:credits()">credit</a>
+              </div>
+      </div>
+        
+    </div>
+
+    
+        <div class="textbox" id="textbox">
+            <textarea class="text" spellcheck=false id="textspot">put ur text here :3</textarea>
+        </div>
+    
+  </body>
+
+
+</html>

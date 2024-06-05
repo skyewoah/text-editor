@@ -1,0 +1,115 @@
+body{
+    background-color: rgb(34, 33, 42);
+}
+
+
+.topBar{
+    background-color: rgb(18, 20, 22);
+
+    position: relative;
+    z-index: 1;
+
+    
+    
+    
+}
+
+.fileBtn{
+    color: rgb(169, 171, 178);
+    background-color: rgb(31, 33, 34);
+    border: none;
+    padding: 5px 50px;
+    font-size: 25px;
+
+}
+
+.optionBtn{
+    color: rgb(169, 171, 178);
+    background-color: rgb(31, 33, 34);
+    border: none;
+    padding: 5px 35px;
+    font-size: 25px;
+}
+
+
+
+.file{
+    display: inline-block;
+    position: relative;
+}
+
+.options{
+    display: inline-block;
+    position: relative;
+}
+
+.fileContent{
+    display: none;
+    
+    position: absolute;
+    background-color: rgb(18, 18, 20);
+    min-width: 150px;
+    z-index: 1;
+    
+    
+}
+
+@keyframes anim{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+.fileContent a{
+    color: rgb(169, 171, 178);
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.file:hover .fileContent{
+    display: block;
+    animation-name: anim;
+    animation-duration: 0.2s;
+}
+
+.options:hover .fileContent{
+    display: block;
+    animation-name: anim;
+    animation-duration: 0.2s;
+    
+    
+}
+
+.fileContent a:hover{
+    background-color: rgb(12, 12, 14);
+    
+}
+
+.textbox .text{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    background-color: rgb(23, 23, 24);
+}
+
+.text{
+    position: relative;
+    background-color: rgb(23, 23, 24);
+    border: none;
+    text-decoration: none;
+    resize: none;
+    outline: none;
+    color: rgb(150, 153, 165, 0.25);
+    font-size: 20px;
+    transition-duration: 0.15s;
+    overflow: scroll;
+   
+
+}
+
+.text:hover{
+    text-decoration: none;
+    color: rgba(119, 122, 132, 0.8);
+}
+
