@@ -12,6 +12,8 @@ let optionsDark = "";
 let textDivDark = "";
 let textDark = "";
 
+const url = "http://127.0.0.1:3000/api/upload";
+
 function start(){
     let textbox = document.getElementById("textspot");
     textbox.value = document.cookie;
@@ -22,6 +24,17 @@ function clearCookies(){
     alert("cleared!");
 }
 
+function cloudSave(){
+    const text = document.getElementById("textspot").value;
+    const file = new Blob([text], {type: 'text/plain'});
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain'
+        },
+        body: text
+    });
+}
 
 function saveCookie(){
     let textbox = document.getElementById("textspot");
@@ -77,6 +90,7 @@ function switchTheme(){
     }
 
     console.log(whole);
+
     
 
     if(current == "dark"){
