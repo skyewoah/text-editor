@@ -1,4 +1,5 @@
 let current = "dark";
+let currentSize = 20;
 
 
 //XD????????????????????????
@@ -12,7 +13,29 @@ let optionsDark = "";
 let textDivDark = "";
 let textDark = "";
 
+
 const url = "http://127.0.0.1:3000/api/upload";
+
+
+document.onkeypress = function (e) {
+    let text = document.getElementById("textspot").value;
+
+    //easter eggs for later :3c
+};
+
+function fontSizeChange(type){
+    let textFont = document.getElementById("textspot");
+    if(type == 1){
+        console.log("hey");
+        currentSize+=1;
+    }else{
+        currentSize-=1;
+    }
+
+    textFont.style.fontSize = String(currentSize) + "px";
+
+    console.log(textFont.style.fontSize);
+}
 
 function start(){
     let textbox = document.getElementById("textspot");
