@@ -1,5 +1,5 @@
 let current = "dark";
-let currentSize = 20;
+
 
 
 //XD????????????????????????
@@ -14,14 +14,27 @@ let textDivDark = "";
 let textDark = "";
 
 
+
 const url = "http://127.0.0.1:3000/api/upload";
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Initialize slider event listener
+    var slider = document.getElementById("myRange");
+    slider.oninput = function() {
+        var currentSize = this.value;
+        document.getElementById('amount').value = currentSize;
+        let textFont = document.getElementById("textspot");
+        textFont.style.fontSize = currentSize + "px";
+    };
+});
 
-document.onkeypress = function (e) {
-    let text = document.getElementById("textspot").value;
+  
 
-    //easter eggs for later :3c
-};
+// document.onkeypress = function (e) {
+//     let text = document.getElementById("textspot").value;
+
+//     //easter eggs for later :3c
+// };
 
 function fontSizeChange(type){
     let textFont = document.getElementById("textspot");
@@ -49,7 +62,7 @@ function clearCookies(){
 
 function cloudSave(){
     const text = document.getElementById("textspot").value;
-    const file = new Blob([text], {type: 'text/plain'});
+    //const file = new Blob([text], {type: 'text/plain'});
     fetch(url, {
         method: 'POST',
         headers: {
